@@ -1,0 +1,83 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Login extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField tf_Login;
+	private JTextField tf_Senha;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Login frame = new Login();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Login() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblLogin = new JLabel("Login");
+		lblLogin.setBounds(114, 61, 46, 14);
+		contentPane.add(lblLogin);
+		
+		JLabel lblSenha = new JLabel("Senha");
+		lblSenha.setBounds(114, 117, 46, 14);
+		contentPane.add(lblSenha);
+		
+		tf_Login = new JTextField();
+		tf_Login.setBounds(208, 58, 86, 20);
+		contentPane.add(tf_Login);
+		tf_Login.setColumns(10);
+		
+		tf_Senha = new JTextField();
+		tf_Senha.setBounds(208, 114, 86, 20);
+		contentPane.add(tf_Senha);
+		tf_Senha.setColumns(10);
+		
+		JButton btnEntrar = new JButton("Entrar");
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnEntrar.setBounds(94, 187, 89, 23);
+		contentPane.add(btnEntrar);
+		
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Login.this.dispose();
+			}
+		});
+		btnCancelar.setBounds(252, 187, 89, 23);
+		contentPane.add(btnCancelar);
+	}
+}

@@ -1,0 +1,40 @@
+package br.com.ConexaoBanco;
+
+import java.sql.*;
+
+public class Connect
+{
+    public static void main (String[] args)
+    {
+        Connection conecta = null;
+
+        // Dados de conexao
+        try
+        {
+            String userName = "root";
+            String password = "";
+            String url = "jdbc:mysql://localhost/db_tradehelper";
+            Class.forName ("com.mysql.jdbc.Driver").newInstance();        
+            conecta = DriverManager.getConnection (url, userName, password);
+            System.out.println ("Conexão com o BD estabelecida!");
+        }
+        
+        // Informa erros
+        catch (Exception e)
+        {
+            System.err.println ("Não foi possível estabelecer conexão com o BD");
+        }
+        finally
+        {
+            if (conecta != null)
+            {
+                try
+                {
+                    conecta.close ();
+                    System.out.println ("Conexão finalizada");
+                }
+                catch (Exception e) { /* ignore close errors */ }
+            }
+        }
+    }
+}

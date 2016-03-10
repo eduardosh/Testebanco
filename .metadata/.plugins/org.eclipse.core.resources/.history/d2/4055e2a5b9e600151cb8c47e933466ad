@@ -1,0 +1,30 @@
+package dao;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+
+public class Acesso {
+	
+	public boolean acesso;
+	
+	public void Acesso(String login, String senha){
+		Connection con = null;
+		Statement consulta = null;
+		ResultSet tabela = null;
+		
+		try{
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost/db_tradehelper","root","");
+			
+		}
+		
+		
+		
+		
+	} 
+
+}
