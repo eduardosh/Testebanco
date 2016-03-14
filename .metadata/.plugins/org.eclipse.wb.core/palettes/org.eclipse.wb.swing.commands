@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<moveEntry
+		id="org.eclipse.wb.swing.components javax.swing.JComboBox"
+		category="org.eclipse.wb.swing.components"
+		nextEntry="org.eclipse.wb.swing.components javax.swing.JRadioButton"/>
+	<addCategory
+		id="category_1457965114630"
+		name="Custom"
+		description="Container for custom components"
+		visible="true"
+		open="true"/>
+	<addComponent
+		id="custom_1457965114630"
+		name="JFileChooser"
+		description="Creates javax.swing.JFileChooser component."
+		visible="true"
+		class="javax.swing.JFileChooser"
+		category="category_1457965114630"/>
+	<addComponent
+		id="custom_1457966240412"
+		name="FileImageInputStream"
+		description="Creates javax.imageio.stream.FileImageInputStream component."
+		visible="true"
+		class="javax.imageio.stream.FileImageInputStream"
+		category="category_1457965114630"/>
+	<addComponent
+		id="custom_1457966254514"
+		name="FileImageInputStream"
+		description="Creates javax.imageio.stream.FileImageInputStream component."
+		visible="true"
+		class="javax.imageio.stream.FileImageInputStream"
+		category="category_1457965114630"/>
+	<addComponent
+		id="custom_1457969434974"
+		name="ImageView"
+		description="Creates javax.swing.text.html.ImageView component."
+		visible="true"
+		class="javax.swing.text.html.ImageView"
+		category="category_1457965114630"/>
+</commands>

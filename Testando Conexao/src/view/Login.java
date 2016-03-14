@@ -94,7 +94,7 @@ public class Login extends JFrame {
 			}
 		});
 		btnCancelar.setBounds(252, 187, 89, 23);
-		contentPane.add(btnCancelar);
+		contentPane.add(btnCancelar); 	
 		
 		txtSenha = new JPasswordField();
 		txtSenha.setBounds(208, 114, 86, 20);

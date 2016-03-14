@@ -1,0 +1,100 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.JCheckBox;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class ItemGui extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField tfNome;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ItemGui frame = new ItemGui();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ItemGui() {
+		setTitle("Item");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 741, 495);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblCadastroDeProdutos = new JLabel("Cadastro de Produtos");
+		lblCadastroDeProdutos.setBounds(27, 36, 112, 14);
+		contentPane.add(lblCadastroDeProdutos);
+		
+		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setBounds(27, 83, 46, 14);
+		contentPane.add(lblNome);
+		
+		JLabel lblExterior = new JLabel("Exterior:");
+		lblExterior.setBounds(27, 140, 46, 14);
+		contentPane.add(lblExterior);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setToolTipText("");
+		comboBox.setBounds(83, 137, 135, 20);
+		contentPane.add(comboBox);
+		
+		JCheckBox chckbxStattrak = new JCheckBox("StatTrak");
+		chckbxStattrak.setBounds(262, 136, 97, 23);
+		contentPane.add(chckbxStattrak);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setBounds(83, 269, 135, 20);
+		contentPane.add(comboBox_1);
+		
+		JLabel lblPhase = new JLabel("Phase:");
+		lblPhase.setBounds(27, 272, 46, 14);
+		contentPane.add(lblPhase);
+		
+		tfNome = new JTextField();
+		tfNome.setBounds(77, 80, 310, 20);
+		contentPane.add(tfNome);
+		tfNome.setColumns(10);
+		
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setBounds(563, 400, 89, 23);
+		contentPane.add(btnCadastrar);
+		
+		JButton btnLimpar = new JButton("Limpar");
+		btnLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				tfNome.setText("");
+				chckbxStattrak.isSelected();
+				
+			}
+		});
+		btnLimpar.setBounds(456, 400, 89, 23);
+		contentPane.add(btnLimpar);
+	}
+}
